@@ -1,7 +1,7 @@
 import {createBrowserRouter, createRoutesFromElements, Navigate} from "react-router-dom"
 import {Route} from "react-router";
 import {HomePage} from "../../modules/pages/HomePage";
-import {Layout} from "../../modules/UIKit/Layout/Layout";
+import {Layout} from "../../modules/entities/Layout/Layout";
 import {FaqPage} from "../../modules/pages/FaqPage";
 import {ServicesPages} from "../../modules/pages/ServicesPages";
 import {AuthPage} from "../../modules/pages/AuthPage/AuthPage";
@@ -20,4 +20,4 @@ export const router = createBrowserRouter(createRoutesFromElements(
         <Route path='/payment' element={<PaymentPage/>}/>
         <Route path='/submit' element={<SubmitPage/>}/>
     </Route>
-))
+));

@@ -1,7 +1,7 @@
 import {createGlobalStyle} from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-
+  
   * {
     padding: 0px;
     margin: 0px;
@@ -34,9 +34,8 @@ export const GlobalStyles = createGlobalStyle`
   body {
     color: #000;
     line-height: 1;
-    font-family: 'Titi', sans-serif;
+    font-family: 'Poppins',sans-serif;
     font-size: 14px;
-    //text-rendering: optimizeLegibility;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;

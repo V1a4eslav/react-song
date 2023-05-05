@@ -1,33 +1,19 @@
 export interface Colors {
-    primary: string;
-    secondary: string;
-    text: string;
-    secondaryText: string;
-    translucentPrimary: string;
-    translucentSecondary: string;
-    errorColor: string;
+    violet:string
 }
 
 export interface Sizes {
-    sizeThink: string;
-    sizeExtraLight: string;
-    sizeLight: string;
-    sizeSemiLight: string;
-    sizeNormal: string;
-    sizeMedium: string;
-    sizeBold: string;
 }
 
-export interface MediaQueries {
-    phone: string;
-    tablet: string;
-    laptop: string;
+export interface Header {
+    bg: string;
+    textPrimary: string;
 }
 
 export interface Theme {
-    colors: Colors;
+    header: Header;
+    colors:Colors;
     size: Sizes;
-    media: MediaQueries;
 }
 
 export interface ITheme {
