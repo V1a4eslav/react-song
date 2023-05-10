@@ -41,7 +41,7 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-y: scroll;
+    //overflow-y: scroll;
   }
 
   input,

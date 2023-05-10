@@ -10,16 +10,17 @@ import {
     PURGE,
     REGISTER,
 } from 'redux-persist';
+import {ShazamApi} from "./ShazamApi/ShazamApi";
 
 const persistConfig = {
     key: 'root',
     storage,
-    blacklist: [],
+    blacklist: ['ShazamApi'],
     whitelist: [],
 };
 
 const rootReducer = combineReducers({
-
+[ShazamApi.reducerPath]:ShazamApi.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -31,7 +32,7 @@ reducer:persistedReducer,
             serializableCheck:{
                 ignoredActions:[FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
             },
-        }).concat()
+        }).concat(ShazamApi.middleware)
 });
 
 export const persistor = persistStore(store);

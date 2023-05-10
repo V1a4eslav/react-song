@@ -4,10 +4,14 @@ import {NavLink} from "react-router-dom";
 
 export const SHeader = styled.header`
   background-color: ${({theme}: ITheme) => theme.header.bg};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 `;
 
 export const SHeaderNav = styled.nav`
-  position: relative;
   display: flex;
   align-items: center;
   height: 100px;
@@ -23,17 +27,17 @@ export const SHeaderMenu = styled.div`
   @media (max-width: 991.98px) {
     position: absolute;
     width: 250px;
-    top: 0;
+    top: 100%;
     padding-top: 80px;
     padding-bottom: 20px;
-    right: -15px;
+    right: 0;
     flex-direction: column;
     align-items: flex-end;
     transition: all 800ms cubic-bezier(.8, 0, .33, 1);
     border-radius: 0 0 100% 150%;
     transform: translateX(250px);
     overflow: hidden;
-    &:before{
+    &:before {
       content: '';
       position: absolute;
       right: 0;
@@ -46,10 +50,12 @@ export const SHeaderMenu = styled.div`
       transition: opacity 800ms cubic-bezier(.8, 0, .33, 1);
       z-index: 0;
     }
+
     &.active {
       transform: translateX(0px);
       border-radius: 0 0 0 10%;
-      &:before{
+
+      &:before {
         opacity: 1;
       }
     }
@@ -61,11 +67,12 @@ export const SHeaderLink = styled(NavLink)`
   line-height: 134.2%;
   padding: 5px 10px;
   color: ${({theme}: ITheme) => theme.header.textPrimary};
-  
+
   &.active {
     text-decoration: underline;
   }
-  @media(max-width: 991.98px){
+
+  @media (max-width: 991.98px) {
     z-index: 1;
     color: #18E3E7;
   }
