@@ -15,7 +15,7 @@ export const SHeaderNav = styled.nav`
   display: flex;
   align-items: center;
   height: 100px;
-  @media (max-width: 991.98px) {
+  @media (max-width: 1440px) {
     height: 80px;
   }
 `;

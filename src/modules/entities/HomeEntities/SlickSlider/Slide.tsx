@@ -6,9 +6,9 @@ import {
     SSlideGenre,
     SSlideTypeSong
 } from "./SSlickSlider";
-import {MainButton} from "../../UIKit/Buttons/MainButton/MainButton";
-import {SSignInBtn} from "../../UIKit/Buttons/SignInBtn/SSignInBtn";
-import {Track} from "../../../app/repository/ShazamApi/models";
+import {MainButton} from "../../../UIKit/Buttons/MainButton/MainButton";
+import {SSignInBtn} from "../../../UIKit/Buttons/SignInBtn/SSignInBtn";
+import {Track} from "../../../../app/repository/ShazamApi/models";
 import {SlideAudio} from "./SlideAudio";
 
 export const Slide: FC<{ song: Track }> = ({song}) => {

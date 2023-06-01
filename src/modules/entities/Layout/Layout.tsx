@@ -7,12 +7,12 @@ import {Footer} from "../Footer/Footer";
 
 export const Layout = () => {
     return (
-            <SWrapper>
-                <Header/>
-                <SMain>
-                    <Outlet/>
-                </SMain>
-                <Footer/>
-            </SWrapper>
+        <SWrapper>
+            <Header/>
+            <SMain>
+                <Outlet/>
+            </SMain>
+            <Footer/>
+        </SWrapper>
     );
 };

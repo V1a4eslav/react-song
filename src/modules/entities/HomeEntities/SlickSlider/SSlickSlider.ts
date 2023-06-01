@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import BeeberImg from "assets/images/Beeber.jpg";
+import BeeberImg from "assets/images/Home/Beeber.jpg";
 import Slider from "react-slick";
 
 export const SSlickWrapper = styled.div`
@@ -11,7 +11,7 @@ export const SSlickWrapper = styled.div`
   background-position: center;
   color: #fff;
   height: calc(100vh - 100px);
-  @media (max-width: 991.98px) {
+  @media (max-width: 1440px) {
     height: calc(100vh - 80px);
   }
 `
@@ -22,7 +22,7 @@ export const SSlickSlider = styled(Slider)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media (max-width: 991.98px) {
+  @media (max-width: 1440px) {
     height: calc(100vh - 80px);
   }
 `;
