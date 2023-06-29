@@ -5,17 +5,19 @@ import {ChartsElement} from "../entities/HomeEntities/Charts/ChartsElement";
 import {HowItWork} from "../entities/HomeEntities/HowItWork/HowItWork";
 import {Process} from "../entities/HomeEntities/Process/Process";
 import {GlobalProjections} from "../entities/HomeEntities/GlobalProjections/GlobalProjections";
+import {Viral} from "../entities/HomeEntities/Viral/Viral";
 
 
 export const HomePage = () => {
     return (
         <>
-            {/*<SlickSlider/>*/}
-            {/*<Sponsors/>*/}
+            <SlickSlider/>
+            <Sponsors/>
             <HowItWork/>
             <ChartsElement/>
             <Process/>
             <GlobalProjections/>
+            <Viral/>
         </>
     );
 };

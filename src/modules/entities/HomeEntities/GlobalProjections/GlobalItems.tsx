@@ -1,14 +1,11 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 import {SCountStreams, SGlobalImg, SGlobalItem, SGlobalItems, SStreamsTitle} from "./StyledComponents";
 import streamsSvg from 'assets/images/Home/GlobalProjections/streaming.svg';
 import revergeSvg from 'assets/images/Home/GlobalProjections/revenge.svg';
 import market from 'assets/images/Home/GlobalProjections/market.svg';
 import CountUp from 'react-countup';
-import {useIntersectionObserver} from "../../../../hooks/useIntersectionObserver";
-
 
 export const GlobalItems = () => {
-    console.log(1)
     return (
         <>
             <SGlobalItems>
@@ -21,7 +18,7 @@ export const GlobalItems = () => {
                              suffix=" Billion"
                              enableScrollSpy
                              scrollSpyOnce>
-                        {({countUpRef, start}) => (
+                        {({countUpRef}) => (
                             <SCountStreams ref={countUpRef}/>
                         )}
                     </CountUp>
@@ -36,7 +33,7 @@ export const GlobalItems = () => {
                              suffix="m" enableScrollSpy
                              scrollSpyDelay={1500}
                              scrollSpyOnce>
-                        {({countUpRef, start}) => (
+                        {({countUpRef}) => (
                             <SCountStreams ref={countUpRef}/>
                         )}
                     </CountUp>
@@ -50,7 +47,7 @@ export const GlobalItems = () => {
                              suffix="%" enableScrollSpy
                              scrollSpyDelay={3000}
                              scrollSpyOnce>
-                        {({countUpRef, start}) => (
+                        {({countUpRef}) => (
                             <SCountStreams ref={countUpRef}/>
                         )}
                     </CountUp>

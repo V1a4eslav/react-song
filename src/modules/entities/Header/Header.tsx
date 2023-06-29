@@ -32,7 +32,7 @@ export const Header = () => {
         <SHeader>
             <SContainer>
                 <SHeaderNav>
-                    <Logo iconSrc={LogoImg} textColor='#55287D'/>
+                    <Logo iconSrc={LogoImg}/>
                     <HeaderMenu  menuActive={menuActive}>
                         <SHeaderLink to='/home'>Home</SHeaderLink>
                         <SHeaderLink to='/create'>Create</SHeaderLink>

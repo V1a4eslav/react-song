@@ -13,7 +13,9 @@ export const SLogoContainer = styled(Link)`
   }
 `;
 
-export const SLogoText = styled.span`
-  color: ${({theme}:ITheme)=>theme.header.textPrimary};
+export const SLogoText = styled.span.attrs(props => ({
+    color: props.color,
+}))`
+  color: ${props=>props.color ? props.color : ({theme}:ITheme)=>theme.colors.violet};
   font-size: 22px;
 `;
