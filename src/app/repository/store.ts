@@ -11,6 +11,7 @@ import {
     REGISTER,
 } from 'redux-persist';
 import {ShazamApi} from "./ShazamApi/ShazamApi";
+import {playerReducer} from "./ShazamApi/PlayerSlice";
 
 const persistConfig = {
     key: 'root',
@@ -20,17 +21,18 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-[ShazamApi.reducerPath]:ShazamApi.reducer,
+    [ShazamApi.reducerPath]: ShazamApi.reducer,
+    player:playerReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-reducer:persistedReducer,
-    middleware:(getDefaultMiddleware)=>
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
-            serializableCheck:{
-                ignoredActions:[FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+            serializableCheck: {
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
             },
         }).concat(ShazamApi.middleware)
 });
