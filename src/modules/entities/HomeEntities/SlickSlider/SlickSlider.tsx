@@ -19,6 +19,7 @@ export const SlickSlider = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        lazyLoad: "ondemand",
         beforeChange(currentSlide: number,nextSlide:number) {
             setCurrentSlide(nextSlide)
         }

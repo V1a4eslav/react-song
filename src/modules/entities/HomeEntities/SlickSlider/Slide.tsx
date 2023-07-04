@@ -1,4 +1,4 @@
-import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import React, {FC, useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {
     SSlideArtistName,
     SSlideButtonPlay,
@@ -19,10 +19,13 @@ interface ISlide {
 
 export const Slide: FC<ISlide> = ({song}) => {
     const {setPlay, setCurrentSong} = useActions();
+
     const uri: string | undefined = song.hub.actions?.[1].uri;
+
     const isPlaying = useAppSelector(state => state.player.isPlaying);
     const slideIndex = useAppSelector(state => state.player.currentSlide);
-    const {songIndex, songUri} = useAppSelector(state => state.player.currentSong);
+    const {songIndex} = useAppSelector(state => state.player.currentSong);
+
 
     const handlePlay = useCallback(() => {
         if (!isPlaying) {
@@ -45,6 +48,7 @@ export const Slide: FC<ISlide> = ({song}) => {
             );
         }
     }, [isPlaying, slideIndex, songIndex]);
+
 
     return (
         <SSlideContainer>
